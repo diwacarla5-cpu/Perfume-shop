@@ -1,230 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kaye Perfume Shop</title>
 
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Segoe UI', sans-serif;
-    }
-
-    body{
-      background:#fdf2f8;
-      color:#333;
-    }
-
-    /* HEADER */
-    header{
-      background:linear-gradient(135deg,#b3003c,#e11d48);
-      color:white;
-      padding:40px 20px;
-      text-align:center;
-    }
-
-    header h1{
-      font-size:50px;
-      margin-bottom:10px;
-    }
-
-    header p{
-      font-size:18px;
-      color:#ffe4e6;
-    }
-
-    /* PRODUCTS */
-    .container{
-      display:flex;
-      justify-content:center;
-      gap:25px;
-      flex-wrap:wrap;
-      padding:50px 20px;
-    }
-
-    /* CARD */
-    .card{
-      background:white;
-      width:280px;
-      border-radius:20px;
-      overflow:hidden;
-      box-shadow:0 10px 25px rgba(0,0,0,0.15);
-      transition:0.3s ease;
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-    }
-
-    .card img{
-      width:100%;
-      height:280px;
-      object-fit:cover;
-    }
-
-    .card-content{
-      padding:20px;
-      text-align:center;
-    }
-
-    .card-content h2{
-      margin-bottom:10px;
-      color:#be123c;
-      font-size:24px;
-    }
-
-    .card-content p{
-      color:#666;
-      margin-bottom:10px;
-      font-size:14px;
-    }
-
-    .price{
-      font-size:24px;
-      margin:15px 0;
-      font-weight:bold;
-      color:#b3003c;
-    }
-
-    /* BUTTON */
-    button{
-      background:#e11d48;
-      color:white;
-      border:none;
-      padding:12px 22px;
-      border-radius:30px;
-      cursor:pointer;
-      transition:0.3s;
-      font-size:15px;
-      font-weight:bold;
-    }
-
-    button:hover{
-      background:#9f1239;
-      transform:scale(1.05);
-    }
-
-    /* FOOTER */
-    footer{
-      text-align:center;
-      padding:20px;
-      background:#b3003c;
-      color:white;
-      margin-top:20px;
-    }
-
-    /* RESPONSIVE */
-    @media(max-width:768px){
-
-      header h1{
-        font-size:36px;
-      }
-
-      .card{
-        width:100%;
-        max-width:320px;
-      }
-
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- HERO -->
   <header>
-    <h1>Kaye Perfume Shop</h1>
-    <p>Luxury Fragrance Collection</p>
+
+    <div class="hero">
+
+      <h1>Kaye Perfume Shop</h1>
+
+      <p>Luxury Fragrance Collection</p>
+
+      <a href="#perfumes" class="btn">
+        Explore Collection
+      </a>
+
+    </div>
+
   </header>
 
-  <!-- PRODUCTS -->
-  <div class="container">
+  <!-- ABOUT -->
+  <section>
 
-    <!-- PERFUME 1 -->
-    <div class="card">
+    <h2>About Our Shop</h2>
 
-      <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80" alt="Rose Velvet">
+    <p class="about">
+      Kaye Perfume Shop offers elegant, luxurious, and long-lasting fragrances
+      designed for confidence, beauty, and sophistication.
+      Discover premium scents for every personality and occasion.
+    </p>
 
-      <div class="card-content">
+  </section>
 
-        <h2>Rose Velvet</h2>
+  <!-- PERFUMES -->
+  <section id="perfumes">
 
-        <p>Sweet and elegant fragrance perfect for everyday luxury.</p>
+    <h2>Popular Fragrances</h2>
 
-        <div class="price">₱999</div>
+    <div class="menu">
 
-        <button onclick="buyPerfume('Rose Velvet')">
-          Buy Now
-        </button>
+      <!-- CARD 1 -->
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80">
+
+        <h3>Rose Velvet</h3>
+
+        <p>Sweet and elegant fragrance for everyday luxury.</p>
+
+        <span class="price">₱999</span>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80">
+
+        <h3>Midnight Bloom</h3>
+
+        <p>Strong and classy scent with floral notes.</p>
+
+        <span class="price">₱1,299</span>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=800&q=80">
+
+        <h3>Golden Kiss</h3>
+
+        <p>Fresh romantic aroma with premium fragrance.</p>
+
+        <span class="price">₱1,499</span>
+
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1615634262417-1b9d5d0c8d67?auto=format&fit=crop&w=800&q=80">
+
+        <h3>Ocean Mist</h3>
+
+        <p>Cool and refreshing scent inspired by the sea.</p>
+
+        <span class="price">₱1,199</span>
 
       </div>
 
     </div>
 
-    <!-- PERFUME 2 -->
-    <div class="card">
+  </section>
 
-      <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="Midnight Bloom">
+  <!-- CONTACT -->
+  <section class="contact">
 
-      <div class="card-content">
+    <h2>Visit Our Shop</h2>
 
-        <h2>Midnight Bloom</h2>
+    <div class="contact-box">
 
-        <p>Strong and classy scent with luxurious floral notes.</p>
-
-        <div class="price">₱1,299</div>
-
-        <button onclick="buyPerfume('Midnight Bloom')">
-          Buy Now
-        </button>
-
-      </div>
+      <p>📍 Dinalupihan, Bataan 🇵🇭</p>
+      <p>📞 0912-345-6789</p>
+      <p>📘 Kaye Perfume Shop Official Page</p>
+      <p>🕒 Daily: 10:00 AM – 9:00 PM</p>
 
     </div>
 
-    <!-- PERFUME 3 -->
-    <div class="card">
-
-      <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=800&q=80" alt="Golden Kiss">
-
-      <div class="card-content">
-
-        <h2>Golden Kiss</h2>
-
-        <p>Fresh romantic aroma with premium long-lasting scent.</p>
-
-        <div class="price">₱1,499</div>
-
-        <button onclick="buyPerfume('Golden Kiss')">
-          Buy Now
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Kaye Perfume Shop</p>
+
+    <p>© 2026 Kaye Perfume Shop | Luxury • Fragrance • Elegance</p>
+
   </footer>
-
-  <!-- JAVASCRIPT -->
-  <script>
-
-    function buyPerfume(name){
-
-      alert("You selected: " + name);
-
-    }
-
-  </script>
 
 </body>
 </html>
